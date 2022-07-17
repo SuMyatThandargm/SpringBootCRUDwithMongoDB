@@ -21,7 +21,7 @@ public String showOrderPage() {
 	return "Welcome to Order";
 }
 	@PostMapping("/createOrder")
-public ResponseEntity createPurchaseOrder(@RequestBody PurchaseOrder po) {
+public ResponseEntity<PurchaseOrder> createPurchaseOrder(@RequestBody PurchaseOrder po) {
 	return ResponseEntity.ok(poService.createPurchaseOrder(po));
 }
 }

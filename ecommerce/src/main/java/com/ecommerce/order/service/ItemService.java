@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ecommerce.order.controller.ItemNotFoundException;
 import com.ecommerce.order.model.Item;
 import com.ecommerce.order.repository.ItemRepository;
 @Service
@@ -22,6 +23,9 @@ public void deleteItem(int id) {
 }
 public Item updateItem(Item item,int id) throws Exception {
 	Optional<Item> optionalItem = itemRepository.findById(id);
+	if(!optionalItem.isPresent()) {
+		throw new ItemNotFoundException("No Item found to update-"+id);
+	}
     Item newItem = optionalItem.get();
     newItem.setId(item.getId());
     newItem.setItemNo(item.getItemNum());
