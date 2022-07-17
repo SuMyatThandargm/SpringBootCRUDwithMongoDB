@@ -1,0 +1,33 @@
+Item document
+{
+ "itemNum":"Item01",
+ "itemName":"Paper",
+ "itemDescription":"Soft paper with thinkness",
+ "unitPrice":10,
+ "itemStatus":1,
+ "category":"Category1"
+ }
+ Order document
+ {
+ "id":1
+ "lineNum":1
+ "orderQty":2
+ "subTotalAmt":20
+ "orderedItem":{
+ "itemNum":"Item04",
+ "itemName":"Paper",
+ "itemDescription":"Soft paper with thinkness",
+ "unitPrice":10,
+ "itemStatus":1,
+ "category":"Category3"
+ }
+ 
+ Purchase Order
+ {
+ "id":1,
+ "orderDate":
+ "ordersList":[{"id"},{}],
+ "orderedUser":{},
+ "totalAmt":50,
+ 
+ }
